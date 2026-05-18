@@ -93,15 +93,15 @@ function Navbar() {
   }, [isContactModalOpen, isRegistrationModalOpen]);
 
   return (
-    <div className="w-full fixed top-0 h-20 md:h-[5vw] font-bold backdrop-blur-sm z-[999] bg-gradient-to-l from-transparent via-[#dfdfdf] to-transparent">
+    <div className="w-full fixed top-0 h-20 md:h-[5vw] font-bold backdrop-blur-sm z-[999] ">
       <div className="w-full h-full flex justify-between items-center">
         {/* Logo */}
         <div className="w-full h-full flex items-center md:justify-center justify-start pl-4 md:pl-0">
           <Link to="/" className="hover:cursor-pointer">
             <img
-              src="/KTLogo.svg"
+              src="/logo.png"
               alt="Logo"
-              className="h-12 w-36 md:h-[4vw] md:w-[12vw]"
+              className="w-40 md:w-[20vw]"
             />
           </Link>
         </div>
@@ -109,13 +109,13 @@ function Navbar() {
         {/* Desktop Menu */}
         <div className="w-full h-full hidden md:flex items-center justify-evenly text-[1.2vw] font-semibold">
           <Link to="/">
-            <p className="hover:cursor-pointer hover:text-[#1ca4dc]">
+            <p className="hover:cursor-pointer hover:text-yellow-600">
               Home
             </p>
           </Link>
 
           <Link to="/aboutUs">
-            <p className="hover:cursor-pointer hover:text-[#1ca4dc]">
+            <p className="hover:cursor-pointer hover:text-yellow-600">
               About
             </p>
           </Link>
@@ -126,18 +126,18 @@ function Navbar() {
             onMouseEnter={() => setIsServicesDropdownOpen(true)}
             onMouseLeave={() => setIsServicesDropdownOpen(false)}
           >
-            <button className="flex items-center hover:cursor-pointer hover:text-[#1ca4dc]">
+            <button className="flex items-center hover:cursor-pointer hover:text-yellow-600">
               Services
               <ChevronDown className="ml-1 h-4 w-4" />
             </button>
 
             {isServicesDropdownOpen && (
               <div className="absolute left-0 -ml-[4vw] bg-transparent p-[1vw] w-[15vw] rounded-md">
-                <div className="rounded-md shadow-lg bg-neutral-200 ring-1 ring-black ring-opacity-5">
+                <div className="rounded-md shadow-lg bg-black ring-1 ring-black ring-opacity-5">
                   <div className="grid grid-cols-1 font-normal p-[1vw] gap-[0.3vw]">
                     {services.map((service, index) => (
                       <Link to={service.link} key={index}>
-                        <p className="block text-[1vw] hover:text-[#1ca4dc]">
+                        <p className="block text-[1vw] hover:text-yellow-600">
                           {service.name}
                         </p>
                       </Link>
@@ -154,18 +154,18 @@ function Navbar() {
             onMouseEnter={() => setIsIndustryDropdownOpen(true)}
             onMouseLeave={() => setIsIndustryDropdownOpen(false)}
           >
-            <button className="flex items-center hover:cursor-pointer hover:text-[#1ca4dc]">
+            <button className="flex items-center hover:cursor-pointer hover:text-yellow-600">
               Industries
               <ChevronDown className="ml-1 h-4 w-4" />
             </button>
 
             {isIndustryDropdownOpen && (
               <div className="absolute left-0 -ml-[20vw] bg-transparent p-4 w-[40vw] rounded-md">
-                <div className="rounded-md shadow-lg bg-neutral-200 ring-1 ring-black ring-opacity-5">
+                <div className="rounded-md shadow-lg bg-black ring-1 ring-black ring-opacity-5">
                   <div className="grid grid-cols-3 font-normal p-[1vw] gap-[0.3vw]">
                     {industries.map((industry, index) => (
                       <Link to={industry.link} key={index}>
-                        <p className="block text-[1vw] hover:text-[#1ca4dc]">
+                        <p className="block text-[1vw] hover:text-yellow-600">
                           {industry.name}
                         </p>
                       </Link>
@@ -177,7 +177,7 @@ function Navbar() {
           </div>
 
           <Link to="/Training">
-            <p className="hover:cursor-pointer hover:text-[#1ca4dc]">
+            <p className="hover:cursor-pointer hover:text-yellow-600">
               Training
             </p>
           </Link>
@@ -207,7 +207,7 @@ function Navbar() {
         <div className="md:hidden absolute right-4 top-1/2 transform -translate-y-1/2">
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="text-gray-700 hover:text-[#1ca4dc] focus:outline-none"
+            className="text-gray-700 hover:text-yellow-600 focus:outline-none"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -216,16 +216,16 @@ function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden absolute top-20 left-0 right-0 bg-white shadow-md py-4 px-6 z-50">
+        <div className="md:hidden absolute top-20 left-0 right-0 bg-black shadow-md py-4 px-6 z-50">
           <div className="flex flex-col space-y-4">
             <Link to="/">
-              <p className="hover:cursor-pointer hover:text-[#1ca4dc]">
+              <p className="hover:cursor-pointer hover:text-yellow-600">
                 Home
               </p>
             </Link>
 
             <Link to="/aboutUs">
-              <p className="hover:cursor-pointer hover:text-[#1ca4dc]">
+              <p className="hover:cursor-pointer hover:text-yellow-600">
                 About
               </p>
             </Link>
@@ -236,7 +236,7 @@ function Navbar() {
                 onClick={() =>
                   setIsServicesDropdownOpen(!isServicesDropdownOpen)
                 }
-                className="flex items-center hover:cursor-pointer hover:text-[#1ca4dc]"
+                className="flex items-center hover:cursor-pointer hover:text-yellow-600"
               >
                 Services
                 <ChevronDown className="ml-1 h-4 w-4" />
