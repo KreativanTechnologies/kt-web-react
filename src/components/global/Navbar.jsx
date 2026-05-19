@@ -184,24 +184,42 @@ function Navbar() {
         </div>
 
         {/* Desktop Buttons */}
-        <div className="w-full h-full hidden md:flex items-center justify-center gap-2">
-          <div className="flex gap-3">
-            <Link
-              to="/registration"
-              title="Register"
-              className="py-2 px-4 text-[1vw] rounded-full bg-gradient-radial from-transparent to-[#1ca4dc] shadow-md hover:from-[#1ca4dc] hover:to-[#1ca4dc] hover:text-white hover:shadow-lg transition-all duration-300 text-center"
-            >
-              Register
-            </Link>
+     <div className="w-full h-full hidden md:flex items-center justify-center gap-2">
+  <div className="flex gap-3">
+    
+    <Link
+      to="/registration"
+      title="Register"
+      className="
+      py-3 px-6 text-[1vw] rounded-full
+      bg-gradient-to-r from-yellow-300 to-yellow-500
+      text-black font-medium
+      shadow-lg
+      hover:from-yellow-400 hover:to-yellow-600
+      hover:scale-105
+      transition-all duration-300
+      "
+    >
+      Register
+    </Link>
 
-            <button
-              onClick={() => setIsContactModalOpen(true)}
-              className="py-2 px-4 text-[1vw] rounded-full bg-gradient-radial from-transparent to-[#1ca4dc] shadow-md hover:from-[#1ca4dc] hover:to-[#1ca4dc] hover:text-white hover:shadow-lg transition-all duration-300"
-            >
-              Contact Us
-            </button>
-          </div>
-        </div>
+    <button
+      onClick={() => setIsContactModalOpen(true)}
+      className="
+      py-3 px-6 text-[1vw] rounded-full
+      bg-gradient-to-r from-yellow-300 to-yellow-500
+      text-black font-medium
+      shadow-lg
+      hover:from-yellow-400 hover:to-yellow-600
+      hover:scale-105
+      transition-all duration-300
+      "
+    >
+      Contact Us
+    </button>
+
+  </div>
+</div>
 
         {/* Mobile Menu Button */}
         <div className="md:hidden absolute right-4 top-1/2 transform -translate-y-1/2">
@@ -266,22 +284,44 @@ function Navbar() {
             </div>
 
             {/* Mobile Buttons */}
-            <div className="flex items-center gap-2">
-              <button
-                onClick={() => navigate("/registration")}
-                className="flex items-center justify-center gap-1 py-2 w-24 text-xs font-medium rounded-full bg-gradient-radial from-transparent to-[#1ca4dc] shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300"
-              >
-                <UserPlus className="h-4 w-4" />
-                Register
-              </button>
+          <div className="flex items-center gap-2">
+  
+  <button
+    onClick={() => navigate("/registration")}
+    className="
+    flex items-center justify-center gap-2
+    py-2.5 px-4 w-auto
+    text-xs font-semibold text-black
+    rounded-full
+    bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-500
+    shadow-[0_0_20px_rgba(250,204,21,0.35)]
+    hover:shadow-[0_0_30px_rgba(250,204,21,0.6)]
+    hover:scale-105
+    transition-all duration-300
+    "
+  >
+    <UserPlus className="h-4 w-4" />
+    Register
+  </button>
 
-              <button
-                onClick={() => setIsContactModalOpen(true)}
-                className="flex items-center justify-center gap-1 py-2 w-24 text-xs font-medium rounded-full bg-gradient-radial from-transparent to-[#1ca4dc] shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300"
-              >
-                Contact Us
-              </button>
-            </div>
+  <button
+    onClick={() => setIsContactModalOpen(true)}
+    className="
+    flex items-center justify-center gap-2
+    py-2.5 px-4 w-auto
+    text-xs font-semibold text-black
+    rounded-full
+    bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-500
+    shadow-[0_0_20px_rgba(250,204,21,0.35)]
+    hover:shadow-[0_0_30px_rgba(250,204,21,0.6)]
+    hover:scale-105
+    transition-all duration-300
+    "
+  >
+    Contact Us
+  </button>
+
+</div>
           </div>
         </div>
       )}
