@@ -207,7 +207,7 @@ function Navbar() {
         <div className="md:hidden absolute right-4 top-1/2 transform -translate-y-1/2">
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="text-gray-700 hover:text-yellow-600 focus:outline-none"
+            className="text-white hover:text-yellow-600 focus:outline-none"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>

@@ -65,7 +65,7 @@ const Hero = () => {
                 <h1 className="text-[5.8vw] sm:text-[4vh] md:text-[3vw] font-bold mb-2 md:mb-4">
                   {item.heading1}
                 </h1>
-                <p className="text-[3.8vw] sm:text-[3vw] md:text-[1.5vw] text-gray-700">
+                <p className="text-[3.8vw] sm:text-[3vw] md:text-[1.5vw] text-white">
                   {item.heading2}
                 </p>
               </div>
