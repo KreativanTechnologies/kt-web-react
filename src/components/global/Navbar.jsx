@@ -37,10 +37,10 @@ function Navbar() {
   ];
 
   const services = [
-    { name: "Web Development", link: "/services/WebDevelopment" },
-    { name: "App Development", link: "/services/ApplicationDevelopment" },
-    { name: "Digital Marketing", link: "/services/DigitalMarketing" },
-    { name: "UI/UX Design", link: "/services/GraphicDesign" },
+    { name: "Web Development", link: "/services/webdevelopment" },
+    { name: "App Development", link: "/services/appdevelopment" },
+    { name: "Digital Marketing", link: "/services/digital" },
+    { name: "UI/UX Design", link: "/services/graphicdesgining" },
   ];
 
   const closeModal = () => {
